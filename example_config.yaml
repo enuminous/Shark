@@ -1,0 +1,20 @@
+machine: SHARK-M1
+version: 1.0.0
+
+temporal_horizons:
+  - 3
+  - 7
+  - 23
+
+recursive_core:
+  iterations: 3
+
+primary_metric:
+  name: brier_score
+  comparison: shark_vs_raw_state
+
+safety:
+  live_control_authority: false
+
+freeze:
+  hash: sha256

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SHARK Autonomous-System Hazard Record",
+  "type": "object",
+  "required": [
+    "machine_version",
+    "timestamp",
+    "system_id",
+    "hazard_score"
+  ],
+  "properties": {
+    "machine_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "hazard_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "kinematic_contradiction": {
+      "type": "number"
+    },
+    "control_oscillation": {
+      "type": "number"
+    },
+    "boundary_pressure": {
+      "type": "number"
+    },
+    "recursive_hazard": {
+      "type": "number"
+    }
+  }
+}
